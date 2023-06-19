@@ -67,7 +67,7 @@ function getStudent() {
   )
     .then((res) => {
       let studentdata = res.data;
-      console.log(studentdata);
+     
       axiosInstance(`teacher/${student}/student/?firstName=${search1}`).then(
         (res) => {
           let pages;
@@ -140,9 +140,11 @@ TeacherForm.addEventListener("submit", function (e) {
       );
     }
   );
-
+  // let birthday = TeacherForm.elements.birthday.value;
+  
   let isWork = TeacherForm.elements.family.checked;
   let lastName = TeacherForm.elements.lastname.value;
+  let birthday = document.getElementById('data').value;
 
   let data = {
     firstName,
@@ -150,9 +152,10 @@ TeacherForm.addEventListener("submit", function (e) {
     avatar,
     isWork,
     phoneNumber,
+    birthday,
     email,
   };
-  console.log(data);
+
 
   if (select === null) {
     axiosInstance.post(`teacher/${student}/student`, data).then((res) => {
