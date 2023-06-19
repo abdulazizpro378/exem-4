@@ -1,2 +1,2 @@
-const ENDPOINT = 'https://640b68ce81d8a32198e3826b.mockapi.io/api/v1/';
+const ENDPOINT = 'https://648f688075a96b6644451aa8.mockapi.io/';
 const LIMIT = 5;
